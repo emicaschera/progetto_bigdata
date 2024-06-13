@@ -41,7 +41,6 @@ def extract_ticker_year(row):
     name = row[6]
     return (ticker, year), (low, high, volume, close, name)
 
-start_time = time.time()
 
 ticker_year_rdd = rdd.map(extract_ticker_year)
 
@@ -67,9 +66,6 @@ df = df.orderBy("Ticker")
 
 # Mostra il DataFrame risultante
 df.show()
-end_time = time.time()
-execution_time = end_time - start_time
-print(f"Tempo di esecuzione: {execution_time:.2f} secondi")
 #df.coalesce(1).write.csv(output_filepath, header=True, mode="overwrite")
 
 

@@ -44,11 +44,13 @@ for line in sys.stdin:
         print(e, file=sys.stderr)
         continue
 
-"""for k, v in stats.items():
+for k, v in stats.items():
     percentage_change = ((v['last_close'] - v['first_close']) / v['first_close']) * 100
     average_volume = v['volume_sum'] / v['count']
-    print(f"{k},{v['name']},{v['low']:.2f},{v['high']:.2f},{average_volume:.2f},{percentage_change:.2f}")"""
+    print(f"{k},{v['name']},{v['low']:.2f},{v['high']:.2f},{average_volume:.2f},{percentage_change:.2f}
 
+
+"""
 def save_to_csv(filename):
     with open(filename, mode='w', newline='') as csvfile:
         fieldnames = ['Ticker', 'Anno', 'Nome', 'Minimo', 'Massimo', 'Volume Medio', 'Variazione Percentuale']
@@ -73,3 +75,4 @@ def save_to_csv(filename):
 output_filepath = '/home/emilio/PycharmProjects/progetto_bigdata/MapReduceJob/outputJob1/output.csv'
 # Esempio di utilizzo
 save_to_csv(output_filepath)
+"""
